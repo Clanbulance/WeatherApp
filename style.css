@@ -1,0 +1,89 @@
+/* Reset and base layout */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f0f4f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+}
+
+/* Text & inputs */
+.card h1 {
+  font-size: 1.6rem;
+  color: #333;
+}
+
+.InputField, .inputButton {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 8px;
+}
+
+.InputField {
+  border: 1px solid #ccc;
+}
+
+.inputButton {
+  background-color: #0078d4;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.inputButton:hover {
+  background-color: #005fa3;
+}
+
+.weatherBox {
+  font-size: 1rem;
+  color: #666;
+  min-height: 24px;
+}
+
+/* Forecast grid */
+.forecast {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 12px;
+  width: 100%;
+}
+
+.forecast-day {
+  background-color: #eef3f8;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.forecast-day img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 5px;
+}
