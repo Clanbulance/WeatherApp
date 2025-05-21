@@ -10,11 +10,8 @@ async function getTheWeather(location) {
     const response = await fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?key=7K9HDGKA86ZBB55S6FZEALQBU`);
     const data = await response.json();
 
-    const todayTemp = FtoC(data.days[0].temp).toFixed(1);
-    weatherbox.textContent = `Current temp: ${todayTemp}°C`;
-
     forecastContainer.innerHTML = "";
-
+    
     const next7Days = data.days.slice(0, 7);
     next7Days.forEach(day => {
       const dayName = new Date(day.datetime).toLocaleDateString('en-US', { weekday: 'short' });
